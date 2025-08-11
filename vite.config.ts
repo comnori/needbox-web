@@ -8,9 +8,19 @@ export default defineConfig({
   base: '/needbox-web/',
   plugins: [react()],
   resolve: {
-    alias: {
-      antd: path.resolve(__dirname, 'src/antd-stubs.tsx')
-    }
+    alias: [
+      {
+        find: 'antd/dist/reset.css',
+        replacement: path.resolve(
+          __dirname,
+          'node_modules/antd/dist/reset.css'
+        )
+      },
+      {
+        find: 'antd',
+        replacement: path.resolve(__dirname, 'src/antd-stubs.tsx')
+      }
+    ]
   },
   test: {
     environment: 'jsdom'
