@@ -35,7 +35,7 @@ const App: React.FC = () => {
   return (
     <TwoPaneLayout
       left={<SixWForm value={form} onChange={handleChange} description={description} />}
-      right={<RightPane description={description} onSelectExample={handleExample} />}
+      right={<RightPane onSelectExample={handleExample} />}
     />
   );
 };
