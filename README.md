@@ -50,5 +50,3 @@ Pushing to the `main` branch triggers a workflow that builds the project and pub
 ## License
 
 MIT
-
-![screenshot](docs/screenshot.png)
