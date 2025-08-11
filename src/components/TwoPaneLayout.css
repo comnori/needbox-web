@@ -1,0 +1,15 @@
+.two-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .two-pane {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .pane {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
