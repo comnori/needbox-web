@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import { renderDescription } from '../lib/description';
 
 test('renderDescription produces expected string', () => {
