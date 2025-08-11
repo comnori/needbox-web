@@ -1,28 +1,52 @@
 # NeedBox Web
 
-6W 요구사항 수집을 위한 간단한 웹 앱.
+NeedBox Web is a client-side tool that collects software requirements through a 6W (What/Why/Who/Where/When/How) form and displays live examples and description previews.
 
-## 실행
+## Live
+
+https://comnori.github.io/needbox-web/
+
+## Features
+
+- Responsive two-pane layout with a form on the left and an examples carousel with preview on the right
+- Field validation with clear messages
+- One-click copy for the rendered description or JSON payload
+- Automated GitHub Pages deployment via GitHub Actions
+
+## Getting Started
+
+### Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 빌드
+The app runs at http://localhost:5173 by default.
+
+### Build
 
 ```bash
 npm run build
 ```
 
-## 배포
-
-main 브랜치에 푸시하면 GitHub Actions가 자동으로 빌드하여 GitHub Pages에 배포합니다.
-
-## 테스트
+### Test
 
 ```bash
 npm test
 ```
 
-![screenshot](docs/screenshot.png)
+## Deployment
+
+Pushing to the `main` branch triggers a workflow that builds the project and publishes the `dist` folder to GitHub Pages.
+
+## Project Structure
+
+- `src/` – application source code
+- `src/data/examples.ts` – sample 6W payloads used in the carousel
+- `src/lib/` – utilities for description rendering, validation, and clipboard
+- `src/__tests__/` – lightweight tests using Vitest
+
+## License
+
+MIT
